@@ -9,16 +9,20 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
     },
-    plugins:[
+    plugins: [
         new HtmlWebpackPlugin()
     ],
-    module : {
+    module: {
         rules: [
             {
                 test: /\.html$/,
                 exclude: /node_modules/,
-                use: {loader: 'html-loader'}
-            }
+                use: { loader: 'html-loader' }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
         ]
     }
 }

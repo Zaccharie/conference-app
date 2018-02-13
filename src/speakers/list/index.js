@@ -11,9 +11,10 @@ export default class SpeakerList {
         this.talkService.findAllSpeakers()
             .then(
             speakersFound => {
-                `<ul>
-               ${ $(idView).html(speakersFound.map(sp => `<li>${sp.firstname}</li>`)) }
-               </ul>`
+            $("#header").hide()
+          
+                $(idView).html(speakersFound.map(sp => `<p>${sp.firstname}</p>`))
+        
             },
             error => `<p> ${error} </p>`
             )

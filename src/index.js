@@ -2,18 +2,22 @@ import Layout from "./layout/index";
 import SpeakerList from "./speakers/list/index";
 import TalkService from "./common/talk.service.js";
 import SessionList from "./sessions/list/index";
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
-alert('Conférence App démarré');
+//alert('Conférence App démarré');
 
 //Appel findAllSpeakers()
 let talkService = new TalkService();
 
 //Render du layout principal
 let layout = new Layout();
+layout.render();
 
 //declaration des composants
 let listSpeaker = new SpeakerList(talkService);
 let listSession = new SessionList(talkService);
+
 
 //router
 var router = () => {
@@ -21,8 +25,6 @@ var router = () => {
         listSpeaker.render('#main-view');
     } else if (location.hash == '#sessions-list') {
         listSession.render('#main-view');
-    } else {
-        layout.render();
     }
 }
 window.addEventListener('load', () => {

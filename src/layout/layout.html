@@ -1,6 +1,51 @@
-<header>Ici Bientôt un logo</header>
-<nav>Ici bientôt un menu</nav>
-<section id="main-view">
-    Ici le contenu principal en attente de chargement
-</section>
-<footer>Ici bientôt un pied de page</footer>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Conférence</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#sessions-list">Sessions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#speakers-list">Présentateurs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header id="header" style="text-align: center">
+        <img src="src/img/DevFest.jpg" class="img-responsive" alt="Logo">
+    </header>
+    <br/>
+    <section id="main-view">
+        <div class="row" style="text-align: center">
+            <div class="col">
+                <h2>Conférence</h2>
+            </div>
+        </div>
+        <div class="row" style="text-align: center">
+            <div class="col">
+                <span>Date Début - Date Fin</span>
+            </div>
+        </div>
+        <br/>
+        <div class="row" style="text-align: center">
+            <div class="col-md-4 offset-4">
+                <a class="btn btn-dark btn-block" href="#sessions-list" role="button">Voir les sessions</a>
+            </div>
+        </div>
+        <br/>
+        <div class="row" style="text-align: center">
+            <div class="col-md-4 offset-4">
+                <a class="btn btn-dark btn-block" href="#speakers-list" role="button">Voir les présentateurs</a>
+            </div>
+        </div>
+    </section>
+    <br/>
+    <div class="row justify-content-center">
+        <footer>footer</footer>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import $  from "jquery";
+import $ from "jquery";
 
 export default class SessionList {
 
@@ -11,9 +11,9 @@ export default class SessionList {
         this.talkService.findAllSessions()
             .then(
             sessionsFound => {
-                `<ul>
-               ${ $(idView).html(sessionsFound.map(se => `<li>${se.title}</li>`)) }
-               </ul>`
+                $("#header").hide()
+                $(idView).html(sessionsFound.map(se => `<p><a href="#">${se.title}</a></p>`))
+
             },
             error => `<p> ${error} </p>`
             )
