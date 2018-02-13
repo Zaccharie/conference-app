@@ -1,3 +1,5 @@
+import Layout from "./layout/index";
+import SpeakerList from "./speakers/list/index";
 import TalkService from "./common/talk.service.js";
 
 alert('Conférence App démarré');
@@ -5,12 +7,10 @@ alert('Conférence App démarré');
 //Appel findAllSpeakers()
 let talkService = new TalkService();
 
-talkService.findAllSpeakers()
-    .then(
-        speakersFound => {
-            speakersFound.forEach(function(sp){
-                console.log(sp.firstname);
-            })
-        },
-        error => console.log(error)
-    )
+//Render du layout principal
+let layout = new Layout();
+layout.render();
+
+//render du composant listSpeaker
+let listSp = new SpeakerList(talkService);
+listSp.render('#main-view');
