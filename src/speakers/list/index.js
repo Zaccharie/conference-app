@@ -13,7 +13,7 @@ export default class SpeakerList {
             speakersFound => {
             $("#header").hide()
           
-                $(idView).html(speakersFound.map(sp => `<p>${sp.firstname}</p>`))
+                $(idView).html(speakersFound.map(sp => `<p><a href="#">${sp.firstname} ${sp.lastname}</a></p>`))
         
             },
             error => `<p> ${error} </p>`
